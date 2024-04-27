@@ -1,0 +1,20 @@
+{
+    "name": "sensy/inspire",
+    "description": "This is my first Package in laravel",
+    "autoload": {
+        "psr-4": {
+            "Sensy\\Inspire\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Onen Sensy",
+            "email": "sensyonen@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "license": "proprietary"
+}
