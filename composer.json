@@ -18,12 +18,5 @@
 	},
 	"license": "proprietary",
 	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"extra": {
-		"laravel": {
-			"providers": [
-				"Sensy\\Inspire\\InspireServiceProvider"
-			]
-		}
-	}
+	"prefer-stable": true
 }
