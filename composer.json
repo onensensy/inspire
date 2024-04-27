@@ -17,5 +17,9 @@
 		"guzzlehttp/guzzle": "^7.0.1"
 	},
 	"license": "proprietary",
-	"minimum-stability": "dev"
+	{
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
+
 }
