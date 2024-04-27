@@ -18,11 +18,24 @@ class InspireServiceProvider extends ServiceProvider
         # Loading views
         $this->loadViewsFrom(__DIR__ . '/../views', 'inspire');
         # Loading migrations
-        // $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
-        # Loading assets
-        // $this->publishes([
-        //     __DIR__ . '/../public' => public_path('vendor/inspire'),
-        // ], 'public');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+
+        # Loading assets(Publishable assets)
+        // php artisan vendor:publish --tag=inspire-public --force
+        $this->publishes([
+            __DIR__ . '/../public' => public_path('vendor/inspire'),
+        ], 'inspire-public');
+
+        // php artisan vendor:publish --tag=inspire-config --force
+        $this->publishes([
+            __DIR__ . '/../config/inspire.php' => config_path('inspire.php'),
+        ], 'inspire-config');
+
+        // php artisan vendor:publish --tag=inspire-views --force
+        $this->publishes([
+            __DIR__ . '/../views' => resource_path('views/vendor/inspire'),
+        ], 'inspire-views');
+
         # Loading Commands
         $this->commands([
             InspireCommand::class,
